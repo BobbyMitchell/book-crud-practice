@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-before_action :find_book, only: [:show]
+before_action :find_book, only: [:show, :edit, :update, :destroy]
   def index
     @books = Book.all
   end
@@ -22,9 +22,13 @@ before_action :find_book, only: [:show]
   end
 
   def update
+    @book.update(book_params)
+    redirect_to book_path(@book)
   end
 
   def destroy
+    @book.destroy
+    redirect_to books_path
   end
 
   private

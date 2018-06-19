@@ -2,3 +2,5 @@
 <h2><%= "by #{@book.author}" %></h2>
 <h3><%= @book.genre %></h3>
 <h3><%= link_to "Back to all books", books_path %></h3>
+<h3><%= link_to "Edit this book", edit_book_path(@book)  %></h3>
+<h3><%= link_to "Delete this book", book_path(@book), method: :delete   %></h3>
