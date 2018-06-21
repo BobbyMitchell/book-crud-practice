@@ -1,0 +1,7 @@
+
+<%= form_for [@book, @review] do |f| %>
+<%= f.label :content, "Write your comment here"
+ %>
+ <%= f.text_field :content %>
+ <%= f.submit %>
+<% end %>
