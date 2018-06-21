@@ -1,6 +1,10 @@
 class BooksController < ApplicationController
 
 before_action :find_book, only: [:show, :edit, :update, :destroy]
+
+  def top
+    @top_books = Book.where(rating: 5)
+  end
   def index
     @books = Book.all
   end
