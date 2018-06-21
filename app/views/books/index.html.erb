@@ -4,5 +4,8 @@
 <h2><%= link_to book.title, book_path(book)  %></h2>
 <h2><%= "by #{book.author}"  %></h2>
 <h3><%= book.genre %></h3>
+<h3><%= book.read ? "You Have read this book" : "Still to read" %></h3>
+
+
 <% end %>
 <%= link_to "Enter a new book", new_book_path  %>

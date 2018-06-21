@@ -1,10 +1,12 @@
 
 <%= form_for @book do |f|  %>
 <%= f.label :title, "Enter book title" %>
-<%= f.text_field :title %>
+<%= f.text_field :title %>  <br />
 <%= f.label :author, "Enter the book's author" %>
 <%= f.text_field :author %>
 <%= f.label :genre, "Enter book genre" %>
 <%= f.text_field :genre %>
+<%= f.label "I have read this." %>
+<%= f.check_box :read %>
 <%= f.submit %>
 <% end %>
