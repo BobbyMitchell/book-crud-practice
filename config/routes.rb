@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get "top", to: "books#top"
     end
+    resources :reviews, only: [:new, :create]
   end
   root to: "books#index"
 end
