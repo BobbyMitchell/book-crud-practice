@@ -1,6 +1,13 @@
 <h1><%= @book.title %></h1>
 <h2><%= "by #{@book.author}" %></h2>
 <h3><%= @book.genre %></h3>
+
+<h2><% @book.reviews.each do |review| %></h2>
+<h2>----------------------</h2>
+<h2><%= review.content %></h2>
+<% end %>
+
+<h2><%= link_to "Review this book", new_book_review_path(@book) %></h2>
 <h3><%= link_to "Back to all books", books_path %></h3>
 <h3><%= link_to "Edit this book", edit_book_path(@book)  %></h3>
 <h3><%= link_to "Delete this book", book_path(@book), method: :delete   %></h3>
